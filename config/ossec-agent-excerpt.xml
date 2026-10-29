@@ -1,0 +1,29 @@
+<!--
+  EXCERPT ONLY – sanitized.
+  Agent: LegacyVictimWin7 (Wazuh agent v4.7.5), file: C:\Program Files (x86)\ossec-agent\ossec.conf
+  Contains only lines visible in my screenshots (09 and 10). Not a complete, working config.
+  No keys or passwords are included.
+-->
+<ossec_config>
+  <client>
+    <server>
+      <address>192.168.1.10</address>
+      <port>1514</port>
+      <protocol>tcp</protocol>
+    </server>
+    <config-profile>windows, windows7</config-profile>
+    <crypto_method>aes</crypto_method>
+    <notify_time>10</notify_time>
+    <time-reconnect>60</time-reconnect>
+    <auto_restart>yes</auto_restart>
+  </client>
+
+  <syscheck>
+    <!-- ... default Windows directories omitted ... -->
+    <frequency>43200</frequency>
+    <directories realtime="yes">%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Startup</directories>
+    <!-- Lab addition: fake "sensitive data" folder ("HEMLIGT" = "SECRET") -->
+    <directories check_all="yes" realtime="yes">C:\Users\LegacyUser\Desktop\HEMLIGT</directories>
+    <ignore>%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Startup\desktop.ini</ignore>
+  </syscheck>
+</ossec_config>

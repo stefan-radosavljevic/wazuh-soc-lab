@@ -1,0 +1,9 @@
+# Never commit secrets or raw lab output
+*.key
+client.keys
+*.pem
+*-passwords.txt
+wazuh-install-files.tar
+*.log
+.DS_Store
+Thumbs.db
