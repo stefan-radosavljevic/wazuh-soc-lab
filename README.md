@@ -1,6 +1,6 @@
 # Wazuh SOC Lab – Legacy Windows host monitoring (IT/OT-inspired)
 
-> **Svensk sammanfattning:** Det här är mitt hemmalabb från maj 2026, byggt i VirtualBox som en del av mitt examensarbete på YH-utbildningen IT-säkerhetstekniker (Edugrade, juni 2026) om incidenthantering i hybrida IT/OT-miljöer med Wazuh och MITRE ATT&CK. Labbet består av en Wazuh-server på Ubuntu 24.04 och två Windows-klienter på ett isolerat internt nät. En äldre Windows 7-maskin får symbolisera den typ av äldre värd (t.ex. HMI/ingenjörsstation) som ofta finns kvar i industrimiljöer – det är **inga riktiga OT-enheter** i labbet. Repot dokumenterar installationen, felsökningen av agentanslutningen, en ping-svep (spaning, MITRE T1018) och en filintegritetslarm (Wazuh-regel 550, MITRE T1565.001). Allt bygger på mina egna skärmdumpar; det som inte är gjort än är markerat som *planerat*.
+> **Svensk sammanfattning:** Det här är mitt hemmalabb från maj 2026, byggt i VirtualBox för att öva på det jag lärde mig på YH-utbildningen IT-säkerhetstekniker (Edugrade, juni 2026). Det är ett separat labb från mitt examensarbete om incidenthantering i hybrida IT/OT-miljöer. Labbet består av en Wazuh-server på Ubuntu 24.04 och två Windows-klienter på ett isolerat internt nät. En äldre Windows 7-maskin får symbolisera den typ av äldre värd (t.ex. HMI/ingenjörsstation) som ofta finns kvar i industrimiljöer – det är **inga riktiga OT-enheter** i labbet. Repot dokumenterar installationen, felsökningen av agentanslutningen, en ping-svep (spaning, MITRE T1018) och en filintegritetslarm (Wazuh-regel 550, MITRE T1565.001). Allt bygger på mina egna skärmdumpar; det som inte är gjort än är markerat som *planerat*.
 
 ---
 
@@ -14,7 +14,7 @@ A small, isolated SOC lab built in **Oracle VirtualBox** (21–27 May 2026) to p
 4. generate attacker-like activity and file changes,
 5. read the resulting alert and map it to **MITRE ATT&CK**.
 
-The lab is part of my YH thesis (IT-säkerhetstekniker, Edugrade, June 2026) on incident handling in hybrid IT/OT environments with Wazuh and MITRE ATT&CK.
+This is a personal home lab built alongside my YH programme (IT-säkerhetstekniker, Edugrade, June 2026). It is separate from my thesis lab on incident handling in hybrid IT/OT environments.
 
 **Why Windows 7?** Industrial environments often still run legacy Windows on HMIs and engineering workstations because vendor software is certified for a specific OS. The `LegacyVictimWin7` VM is a *stand-in* for that kind of host. The lab contains no PLCs, no industrial protocols and no real OT equipment.
 
