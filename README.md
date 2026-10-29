@@ -152,4 +152,4 @@ LICENSE                       – MIT
 
 ## Author
 
-Stevo Radosavljevic – IT-säkerhetstekniker (YH, Edugrade, 2026) – [github.com/stevo-radosavljevic](https://github.com/stevo-radosavljevic)
+Stevo Radosavljevic – IT-säkerhetstekniker (YH, Edugrade, 2026) – [github.com/stefan-radosavljevic](https://github.com/stefan-radosavljevic)
